@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import GlobalStyle from "./styles/globalStyles";
-import { Header, Message } from "./components";
+import { Header, Message, Footer } from "./components";
 import { ContainerScreen } from './App.styles';
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from './App.types';
@@ -22,6 +22,7 @@ function App() {
         <Header />
         <Message message="Teste" color="red" />
         <div style={{ height: '50%', backgroundColor: 'blue' }}>asas</div>
+        <Footer />
       </ContainerScreen>
     </>
   );
