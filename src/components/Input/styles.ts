@@ -4,7 +4,7 @@ export const StyledInput = styled.input`
   border: 1px solid #cfcfcf;
   outline: 0;
   border-radius: 4px;
-  width: 217px;
+  width: 250px;
   padding: 14px 12px;
 
   &::-webkit-inner-spin-button {
