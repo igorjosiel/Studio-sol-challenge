@@ -25,7 +25,7 @@ export default createReducer(INITIAL_STATE, {
             searchedNumber: payload?.value,
         }
     },
-    [typeSuccess.type]: (state) => {
+    [typeError.type]: (state) => {
         return {
             ...state,
             loading: false,
