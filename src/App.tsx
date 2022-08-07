@@ -1,12 +1,15 @@
 import GlobalStyle from "./styles/globalStyles";
 import { Header } from "./components";
+import { ContainerScreen } from './App.styles';
 
 function App() {
   return (
     <>
       <GlobalStyle />
-      <Header />
-      {/* <div style={{ height: '75%', backgroundColor: 'blue' }}>asas</div> */}
+      <ContainerScreen>
+        <Header />
+        <div style={{ height: '75%', backgroundColor: 'blue' }}>asas</div>
+      </ContainerScreen>
     </>
   );
 }

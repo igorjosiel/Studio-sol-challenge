@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    margin-top: 60px;
+    height: 25%;
 `;
 
 export const Text = styled.h1`
@@ -12,7 +12,7 @@ export const Text = styled.h1`
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     letter-spacing: -1px;
-    margin-bottom: 10px;
+    margin-top: 60px;
 `;
 
 export const Divider = styled.hr`
