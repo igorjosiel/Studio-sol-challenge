@@ -1,8 +1,9 @@
 import styled from "styled-components";
 
-export const ContainerScreen = styled.div`
+export const Container = styled.div`
+    width: 380px;
+    height: 20%;
+    margin: 0px auto;
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
-    height: 100vh;
 `;

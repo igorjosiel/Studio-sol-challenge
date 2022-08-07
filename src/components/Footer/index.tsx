@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Input, Button } from "../index";
+import { Container } from "./styles";
 
 function Footer() {
     const [guessNumber, setGuessNumber] = useState('');
@@ -11,16 +12,17 @@ function Footer() {
     }
 
     return (
-        <div style={{ width: '380px', margin: '0px auto', display: 'flex', justifyContent: 'space-between' }}>
+        <Container>
             <Input
                 name={'guessNumber'}
                 value={guessNumber}
                 onChange={changeGuessNumber}
                 placeholder={'Digite o palpite'}
                 type={'number'}
+                height={'15%'}
             />
-            <Button text="Enviar" />
-        </div>
+            <Button text="Enviar" height="35%" />
+        </Container>
     );
 }
 

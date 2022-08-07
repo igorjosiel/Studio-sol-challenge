@@ -1,11 +1,13 @@
 import styled from "styled-components";
+import { InputProps } from "./tyes";
 
-export const StyledInput = styled.input`
+export const StyledInput = styled.input<InputProps>`
   border: 1px solid #cfcfcf;
   outline: 0;
   border-radius: 4px;
-  width: 250px;
   padding: 14px 12px;
+  width: ${props => props.width ? props.width : '250px'};
+  height: ${props => props.height};
 
   &::-webkit-inner-spin-button {
     -webkit-appearance: none;

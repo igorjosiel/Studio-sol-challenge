@@ -1,7 +1,7 @@
 import { InputProps } from "./tyes";
 import { StyledInput } from "./styles";
 
-const Input = ({ name, placeholder, type, value, onChange }: InputProps) => {
+const Input = ({ name, placeholder, type, value, onChange, ...props }: InputProps) => {
     return (
         <StyledInput
             type={type}
@@ -9,6 +9,7 @@ const Input = ({ name, placeholder, type, value, onChange }: InputProps) => {
             value={value}
             placeholder={placeholder}
             onChange={(input) => onChange(input.target.value)}
+            {...props}
         />
     );
 }

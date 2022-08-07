@@ -4,4 +4,6 @@ export interface InputProps {
     onChange: (value: string) => void,
     placeholder: string,
     type: 'text' | 'number',
+    height: string,
+    width?: string,
 }
