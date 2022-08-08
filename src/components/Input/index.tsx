@@ -1,4 +1,4 @@
-import { InputProps } from "./tyes";
+import { InputProps } from "./types";
 import { StyledInput } from "./styles";
 
 const Input = ({ name, placeholder, type, value, onChange, ...props }: InputProps) => {

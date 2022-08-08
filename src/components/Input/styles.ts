@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { InputProps } from "./tyes";
+import { InputProps } from "./types";
 
 export const StyledInput = styled.input<InputProps>`
   border: 1px solid #cfcfcf;

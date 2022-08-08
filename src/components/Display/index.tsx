@@ -1,5 +1,5 @@
 import { ContainerSegments, Segment } from "./styles";
-import { DisplayProps } from "./tyes";
+import { DisplayProps } from "./types";
 
 function Display({ leds }: DisplayProps) {
     return (
@@ -33,38 +33,6 @@ function Display({ leds }: DisplayProps) {
                     className={`segment_g ${leds.seventh}`}
                     data-testid="segment_g"
                 />
-                {/* {Object.keys(arrayActive).map((item, index) => (
-                    <div key={index}>
-                        <Segment
-                            className={`segment_a ${item}`}
-                            data-testid="segment_a"
-                        /> */}
-                {/* <Segment
-                            className={`segment_b ${item.b}`}
-                            data-testid="segment_b"
-                        />
-                        <Segment
-                            className={`segment_c ${item.c}`}
-                            data-testid="segment_c"
-                        />
-                        <Segment
-                            className={`segment_d ${item.d}`}
-                            data-testid="segment_d"
-                        />
-                        <Segment
-                            className={`segment_e ${item.e}`}
-                            data-testid="segment_e"
-                        />
-                        <Segment
-                            className={`segment_f ${item.f}`}
-                            data-testid="segment_f"
-                        />
-                        <Segment
-                            className={`segment_g ${item.g}`}
-                            data-testid="segment_g"
-                        /> */}
-                {/* </div>
-                ))} */}
             </ContainerSegments>
         </>
     );

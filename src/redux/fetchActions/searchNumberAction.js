@@ -1,6 +1,11 @@
 import api from "../../services/api";
 
-import { typeLoading, typeSuccess, typeError } from "../store/searchNumber";
+import {
+    typeLoading,
+    typeSuccess,
+    typeError,
+    typeChangeLeds,
+} from "../store/searchNumber";
 
 export const searchNumberAction = () => {
     return async (dispatch) => {
@@ -13,3 +18,9 @@ export const searchNumberAction = () => {
         }
     };
 };
+
+export const changeLedsAction = (leds) => {
+    return async (dispatch) => {
+        dispatch(typeChangeLeds(leds));
+    }
+}

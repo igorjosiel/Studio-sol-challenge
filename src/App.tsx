@@ -1,27 +1,17 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import GlobalStyle from "./styles/globalStyles";
 import { Header, Message, Footer, Display } from "./components";
 import { ContainerScreen } from './App.styles';
 import { useDispatch, useSelector } from "react-redux";
-import { RootState } from './App.types';
+import { RootState } from "./App.types";
 import { searchNumberAction } from "./redux/fetchActions/searchNumberAction";
 
 function App() {
   const dispatch = useDispatch<any>();
 
-  const [leds, setLeds] = useState(
-    {
-      first: "active",
-      second: "active",
-      third: "active",
-      fourth: "active",
-      fifth: "active",
-      sixth: "active",
-      seventh: "not_active",
-    },
-  );
+  const { searchedNumber, leds } = useSelector<RootState, any>((store) => store?.searchNumber);
 
-  useSelector((store: RootState) => store?.searchNumber);
+  console.log('Deu: ', searchedNumber);
 
   useEffect(() => {
     dispatch(searchNumberAction());
