@@ -7,9 +7,9 @@ export const ContainerSegments = styled.div`
   height: 40%;
   display: flex;
   column-gap: 15px;
-  justify-content: flex-start;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  align-items: flex-start;
   padding: 50px;
 `;
 
@@ -18,7 +18,7 @@ export const Segment = styled.div`
   width: 80px;
   position: relative;
   border-radius: 6px;
-  
+
   &.segment_a {
     clip-path: polygon(0 0, 100% 0, 80% 100%, 20% 100%);
   }

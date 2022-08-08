@@ -1,7 +1,7 @@
-import { DisplayProps } from "../components/Display/types";
+import { LedsProps } from "../App.types";
 
 const switchLed = (data: string) => {
-  const leds: DisplayProps[] = [];
+  const leds: LedsProps[] = [];
 
   const handleLeds = (data: string) => {
     if (data === "1") {
@@ -13,7 +13,7 @@ const switchLed = (data: string) => {
         fifth: "not_active",
         sixth: "not_active",
         seventh: "not_active",
-      })
+      });
     }
 
     if (data === "2") {
@@ -25,7 +25,7 @@ const switchLed = (data: string) => {
         fifth: "active",
         sixth: "not_active",
         seventh: "active",
-      })
+      });
     }
 
     if (data === "3") {
@@ -37,7 +37,7 @@ const switchLed = (data: string) => {
         fifth: "not_active",
         sixth: "not_active",
         seventh: "active",
-      })
+      });
     }
 
     if (data === "4") {
@@ -49,7 +49,7 @@ const switchLed = (data: string) => {
         fifth: "not_active",
         sixth: "active",
         seventh: "active",
-      })
+      });
     }
 
     if (data === "5") {
@@ -61,7 +61,7 @@ const switchLed = (data: string) => {
         fifth: "not_active",
         sixth: "active",
         seventh: "active",
-      })
+      });
     }
 
     if (data === "6") {
@@ -73,7 +73,7 @@ const switchLed = (data: string) => {
         fifth: "active",
         sixth: "active",
         seventh: "active",
-      })
+      });
     }
 
     if (data === "7") {
@@ -85,7 +85,7 @@ const switchLed = (data: string) => {
         fifth: "not_active",
         sixth: "not_active",
         seventh: "not_active",
-      })
+      });
     }
 
     if (data === "8") {
@@ -97,7 +97,7 @@ const switchLed = (data: string) => {
         fifth: "active",
         sixth: "active",
         seventh: "active",
-      })
+      });
     }
 
     if (data === "9") {
@@ -109,7 +109,7 @@ const switchLed = (data: string) => {
         fifth: "not_active",
         sixth: "active",
         seventh: "active",
-      })
+      });
     }
 
     if (data === "0") {
@@ -121,9 +121,9 @@ const switchLed = (data: string) => {
         fifth: "active",
         sixth: "active",
         seventh: "not_active",
-      })
+      });
     }
-  }
+  };
 
   for (let i = 0; i < data.length; i++) {
     handleLeds(data[i]);
