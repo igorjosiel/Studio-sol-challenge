@@ -18,7 +18,7 @@ export const Segment = styled.div`
   width: 80px;
   position: relative;
   border-radius: 6px;
-  background-color: red;
+  
   &.segment_a {
     clip-path: polygon(0 0, 100% 0, 80% 100%, 20% 100%);
   }
@@ -63,5 +63,8 @@ export const Segment = styled.div`
   }
   &.active {
     background-color: ${ledOn};
+  }
+  &.not_active {
+    background-color: ${ledOff};
   }
 `;

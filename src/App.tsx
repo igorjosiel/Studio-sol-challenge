@@ -9,15 +9,15 @@ import { searchNumberAction } from "./redux/fetchActions/searchNumberAction";
 function App() {
   const dispatch = useDispatch<any>();
 
-  const [arrayActive, setArrayActive] = useState(
+  const [leds, setLeds] = useState(
     {
-      a: "active",
-      b: "active",
-      c: "active",
-      d: "active",
-      e: "active",
-      f: "active",
-      g: "not_active",
+      first: "active",
+      second: "active",
+      third: "active",
+      fourth: "active",
+      fifth: "active",
+      sixth: "active",
+      seventh: "not_active",
     },
   );
 
@@ -33,7 +33,7 @@ function App() {
       <ContainerScreen>
         <Header />
         <Message message="Teste" color="red" />
-        <Display arrayActive={arrayActive} />
+        <Display leds={leds} />
         <Footer />
       </ContainerScreen>
     </>
