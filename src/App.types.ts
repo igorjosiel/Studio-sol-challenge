@@ -1,6 +1,6 @@
 export interface RootState {
     searchNumber: number,
-    leds: {
+    leds: [{
         first: string,
         second: string,
         third: string,
@@ -8,5 +8,5 @@ export interface RootState {
         fifth: string,
         sixth: string,
         seventh: string,
-    },
+    }]
 }

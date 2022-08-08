@@ -10,15 +10,17 @@ const INITIAL_STATE = {
     message: '',
     colorMessage: '',
 
-    leds: {
-        first: "active",
-        second: "active",
-        third: "active",
-        fourth: "active",
-        fifth: "active",
-        sixth: "active",
-        seventh: "not_active",
-    },
+    leds: [
+        {
+            first: "active",
+            second: "active",
+            third: "active",
+            fourth: "active",
+            fifth: "active",
+            sixth: "active",
+            seventh: "not_active",
+        }
+    ],
 };
 
 export const typeLoading = createAction('TYPE_LOADING');

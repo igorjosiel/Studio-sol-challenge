@@ -10,7 +10,6 @@ function App() {
   const dispatch = useDispatch<any>();
 
   const {
-    searchedNumber,
     leds,
     message,
     colorMessage,
