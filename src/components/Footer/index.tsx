@@ -20,7 +20,7 @@ function Footer() {
 
     const handleGuessNumber = () => {
         const changedLeds = switchLed(guessNumber);
-        dispatch(changeLedsAction(changedLeds));
+        dispatch(changeLedsAction(changedLeds, guessNumber));
     }
 
     return (

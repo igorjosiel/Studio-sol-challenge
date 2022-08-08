@@ -9,9 +9,12 @@ import { searchNumberAction } from "./redux/fetchActions/searchNumberAction";
 function App() {
   const dispatch = useDispatch<any>();
 
-  const { searchedNumber, leds } = useSelector<RootState, any>((store) => store?.searchNumber);
-
-  console.log('Deu: ', searchedNumber);
+  const {
+    searchedNumber,
+    leds,
+    message,
+    colorMessage,
+  } = useSelector<RootState, any>((store) => store?.searchNumber);
 
   useEffect(() => {
     dispatch(searchNumberAction());
@@ -22,7 +25,7 @@ function App() {
       <GlobalStyle />
       <ContainerScreen>
         <Header />
-        <Message message="Teste" color="red" />
+        <Message message={message} color={colorMessage} />
         <Display leds={leds} />
         <Footer />
       </ContainerScreen>

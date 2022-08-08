@@ -19,8 +19,8 @@ export const searchNumberAction = () => {
     };
 };
 
-export const changeLedsAction = (leds) => {
+export const changeLedsAction = (leds, guessNumber) => {
     return async (dispatch) => {
-        dispatch(typeChangeLeds(leds));
+        dispatch(typeChangeLeds({ leds, guessNumber }));
     }
 }

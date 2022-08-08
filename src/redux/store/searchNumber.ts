@@ -1,10 +1,14 @@
 import { createAction, createReducer } from '@reduxjs/toolkit';
+import colors from "../../styles/colors";
+
+const { error, success, orange } = colors;
 
 const INITIAL_STATE = {
     loading: false,
     searchedNumber: 0,
     error: false,
     message: '',
+    colorMessage: '',
 
     leds: {
         first: "active",
@@ -42,13 +46,21 @@ export default createReducer(INITIAL_STATE, {
             ...state,
             loading: false,
             message: 'Erro',
+            colorMessage: error,
         }
     },
     [typeChangeLeds.type]: (state, { payload }) => {
-        console.log('Payload: ', payload);
+        const { leds, guessNumber } = payload;
+
         return {
             ...state,
-            leds: payload,
+            leds: leds,
+            message: state?.searchedNumber > guessNumber ?
+                'É maior' : state?.searchedNumber < guessNumber ?
+                    'É menor' : state?.searchedNumber == guessNumber ?
+                        'Você acertou!!!' : '',
+            colorMessage: state?.searchedNumber > guessNumber ||
+                state?.searchedNumber < guessNumber ? orange : success,
         }
     },
 });
