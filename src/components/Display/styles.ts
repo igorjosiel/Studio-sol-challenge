@@ -61,10 +61,10 @@ export const Segment = styled.div`
     left: 3px;
     width: 74px;
   }
-  &.active {
+  &.on {
     background-color: ${ledOn};
   }
-  &.not_active {
+  &.off {
     background-color: ${ledOff};
   }
 `;

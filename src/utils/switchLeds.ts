@@ -6,121 +6,121 @@ const switchLed = (data: string) => {
   const handleLeds = (data: string) => {
     if (data === "1") {
       leds.push({
-        first: "not_active",
-        second: "active",
-        third: "active",
-        fourth: "not_active",
-        fifth: "not_active",
-        sixth: "not_active",
-        seventh: "not_active",
+        first: "off",
+        second: "on",
+        third: "on",
+        fourth: "off",
+        fifth: "off",
+        sixth: "off",
+        seventh: "off",
       });
     }
 
     if (data === "2") {
       leds.push({
-        first: "active",
-        second: "active",
-        third: "not_active",
-        fourth: "active",
-        fifth: "active",
-        sixth: "not_active",
-        seventh: "active",
+        first: "on",
+        second: "on",
+        third: "off",
+        fourth: "on",
+        fifth: "on",
+        sixth: "off",
+        seventh: "on",
       });
     }
 
     if (data === "3") {
       leds.push({
-        first: "active",
-        second: "active",
-        third: "active",
-        fourth: "active",
-        fifth: "not_active",
-        sixth: "not_active",
-        seventh: "active",
+        first: "on",
+        second: "on",
+        third: "on",
+        fourth: "on",
+        fifth: "off",
+        sixth: "off",
+        seventh: "on",
       });
     }
 
     if (data === "4") {
       leds.push({
-        first: "not_active",
-        second: "active",
-        third: "active",
-        fourth: "not_active",
-        fifth: "not_active",
-        sixth: "active",
-        seventh: "active",
+        first: "off",
+        second: "on",
+        third: "on",
+        fourth: "off",
+        fifth: "off",
+        sixth: "on",
+        seventh: "on",
       });
     }
 
     if (data === "5") {
       leds.push({
-        first: "active",
-        second: "not_active",
-        third: "active",
-        fourth: "active",
-        fifth: "not_active",
-        sixth: "active",
-        seventh: "active",
+        first: "on",
+        second: "off",
+        third: "on",
+        fourth: "on",
+        fifth: "off",
+        sixth: "on",
+        seventh: "on",
       });
     }
 
     if (data === "6") {
       leds.push({
-        first: "active",
-        second: "not_active",
-        third: "active",
-        fourth: "active",
-        fifth: "active",
-        sixth: "active",
-        seventh: "active",
+        first: "on",
+        second: "off",
+        third: "on",
+        fourth: "on",
+        fifth: "on",
+        sixth: "on",
+        seventh: "on",
       });
     }
 
     if (data === "7") {
       leds.push({
-        first: "active",
-        second: "active",
-        third: "active",
-        fourth: "not_active",
-        fifth: "not_active",
-        sixth: "not_active",
-        seventh: "not_active",
+        first: "on",
+        second: "on",
+        third: "on",
+        fourth: "off",
+        fifth: "off",
+        sixth: "off",
+        seventh: "off",
       });
     }
 
     if (data === "8") {
       leds.push({
-        first: "active",
-        second: "active",
-        third: "active",
-        fourth: "active",
-        fifth: "active",
-        sixth: "active",
-        seventh: "active",
+        first: "on",
+        second: "on",
+        third: "on",
+        fourth: "on",
+        fifth: "on",
+        sixth: "on",
+        seventh: "on",
       });
     }
 
     if (data === "9") {
       leds.push({
-        first: "active",
-        second: "active",
-        third: "active",
-        fourth: "not_active",
-        fifth: "not_active",
-        sixth: "active",
-        seventh: "active",
+        first: "on",
+        second: "on",
+        third: "on",
+        fourth: "off",
+        fifth: "off",
+        sixth: "on",
+        seventh: "on",
       });
     }
 
     if (data === "0") {
       leds.push({
-        first: "active",
-        second: "active",
-        third: "active",
-        fourth: "active",
-        fifth: "active",
-        sixth: "active",
-        seventh: "not_active",
+        first: "on",
+        second: "on",
+        third: "on",
+        fourth: "on",
+        fifth: "on",
+        sixth: "on",
+        seventh: "off",
       });
     }
   };
