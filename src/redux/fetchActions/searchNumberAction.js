@@ -12,7 +12,7 @@ export const searchNumberAction = () => {
   return async (dispatch) => {
     dispatch(typeLoading());
     try {
-      const response = await api.get(`rand?min=1&max=`);
+      const response = await api.get(`rand?min=1&max=300`);
       dispatch(typeSuccess(response?.data));
     } catch (error) {
       dispatch(typeError());

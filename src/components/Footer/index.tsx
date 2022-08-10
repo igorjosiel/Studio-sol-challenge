@@ -19,6 +19,8 @@ function Footer() {
   const handleGuessNumber = () => {
     const changedLeds = switchLed(guessNumber);
     dispatch(changeLedsAction(changedLeds, guessNumber));
+
+    setGuessNumber("");
   };
 
   return (
@@ -30,9 +32,14 @@ function Footer() {
         placeholder={"Digite o palpite"}
         type={"number"}
         height={"15px"}
-        max={"3"}
+        max={3}
       />
-      <Button text="Enviar" height="45px" onClick={handleGuessNumber} />
+      <Button
+        text="Enviar"
+        height="45px"
+        onClick={handleGuessNumber}
+        disabled={false}
+      />
     </Container>
   );
 }

@@ -6,6 +6,5 @@ export interface InputProps {
   type: "text" | "number";
   height: string;
   width?: string;
-  min?: string;
-  max?: string;
+  max: number;
 }

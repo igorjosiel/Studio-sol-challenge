@@ -6,18 +6,24 @@ const Input = ({
   placeholder,
   type,
   value,
-  min,
   max,
   onChange,
   ...props
 }: InputProps) => {
+  const handleOnChange = (event: any) => {
+    const { value } = event?.target;
+
+    if (value?.length <= max) onChange(value);
+  }
+
   return (
     <StyledInput
       type={type}
       name={name}
       value={value}
       placeholder={placeholder}
-      onChange={(event) => onChange(event.target.value)}
+      max={max}
+      onChange={(event) => handleOnChange(event)}
       {...props}
     />
   );

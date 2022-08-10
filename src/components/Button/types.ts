@@ -3,5 +3,6 @@ export interface ButtonProps {
     children?: Element | string,
     width?: string,
     height?: string,
+    disabled: boolean,
     onClick: () => void,
 }
