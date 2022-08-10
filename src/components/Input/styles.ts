@@ -4,10 +4,11 @@ import { InputProps } from "./types";
 export const StyledInput = styled.input<InputProps>`
   border: 1px solid #cfcfcf;
   outline: 0;
+  font-size: 18px;
   border-radius: 4px;
   padding: 14px 12px;
-  width: ${props => props.width ? props.width : '250px'};
-  height: ${props => props.height};
+  width: ${(props) => (props.width ? props.width : "250px")};
+  height: ${(props) => props.height};
 
   &::-webkit-inner-spin-button {
     -webkit-appearance: none;

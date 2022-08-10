@@ -60,16 +60,18 @@ export default createReducer(INITIAL_STATE, {
       message:
         state?.searchedNumber > guessNumber
           ? "É maior"
-          : state?.searchedNumber < guessNumber
+          : state?.searchedNumber !== 0 && state?.searchedNumber < guessNumber
           ? "É menor"
           : state?.searchedNumber == guessNumber
           ? "Você acertou!!!"
-          : "",
+          : "Erro",
       colorMessage:
-        state?.searchedNumber > guessNumber ||
-        state?.searchedNumber < guessNumber
-          ? orange
-          : success,
+        state?.searchedNumber !== 0
+          ? state?.searchedNumber > guessNumber ||
+            state?.searchedNumber < guessNumber
+            ? orange
+            : success
+          : error,
     };
   },
 });

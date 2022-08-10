@@ -1,40 +1,30 @@
 import { ContainerSegments, Segment } from "./styles";
 import { DisplayProps } from "./types";
 
+const ledsName: string[] = [
+  "first",
+  "second",
+  "third",
+  "fourth",
+  "fifth",
+  "sixth",
+  "seventh",
+];
+
 function Display({ leds }: DisplayProps) {
   return (
     <>
       <ContainerSegments id="container_segments">
-        {leds?.map((item, index) => (
+        {leds?.map((item: any, index) => (
           <div key={index}>
-            <Segment
-              className={`segment_a ${item.first}`}
-              data-testid="segment_a"
-            />
-            <Segment
-              className={`segment_b ${item.second}`}
-              data-testid="segment_b"
-            />
-            <Segment
-              className={`segment_c ${item.third}`}
-              data-testid="segment_c"
-            />
-            <Segment
-              className={`segment_d ${item.fourth}`}
-              data-testid="segment_d"
-            />
-            <Segment
-              className={`segment_e ${item.fifth}`}
-              data-testid="segment_e"
-            />
-            <Segment
-              className={`segment_f ${item.sixth}`}
-              data-testid="segment_f"
-            />
-            <Segment
-              className={`segment_g ${item.seventh}`}
-              data-testid="segment_g"
-            />
+            {ledsName?.map((ledName) => {
+              return (
+                <Segment
+                  className={`${ledName}_segment ${item[ledName]}`}
+                  data-testid={`${ledName}_segment`}
+                />
+              );
+            })}
           </div>
         ))}
       </ContainerSegments>

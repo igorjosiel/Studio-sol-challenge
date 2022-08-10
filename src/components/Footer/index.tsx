@@ -29,10 +29,10 @@ function Footer() {
         onChange={changeGuessNumber}
         placeholder={"Digite o palpite"}
         type={"number"}
-        height={"15%"}
+        height={"15px"}
         max={"3"}
       />
-      <Button text="Enviar" height="35%" onClick={handleGuessNumber} />
+      <Button text="Enviar" height="45px" onClick={handleGuessNumber} />
     </Container>
   );
 }
