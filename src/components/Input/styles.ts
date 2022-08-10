@@ -1,5 +1,8 @@
 import styled from "styled-components";
 import { InputProps } from "./types";
+import colors from "../../styles/colors";
+
+const { error, focus } = colors;
 
 export const StyledInput = styled.input<InputProps>`
   border: 1px solid #cfcfcf;
@@ -18,9 +21,9 @@ export const StyledInput = styled.input<InputProps>`
     background-color: #f5f5f5;
   }
   &:focus {
-    border: 1px solid #ff6600;
+    border: 1px solid ${focus};
   }
   &.guess_input_error {
-    border: 1px solid #cc3300;
+    border: 1px solid ${error};
   }
 `;

@@ -1,5 +1,7 @@
 import { ContainerSegments, Segment } from "./styles";
 import { DisplayProps } from "./types";
+import { RootState } from "../../App.types";
+import { useSelector } from "react-redux";
 
 const ledsName: string[] = [
   "first",
@@ -12,6 +14,10 @@ const ledsName: string[] = [
 ];
 
 function Display({ leds }: DisplayProps) {
+  const { success, error } = useSelector<RootState, any>(
+    (store) => store?.searchNumber
+  );
+
   return (
     <>
       <ContainerSegments id="container_segments">
@@ -20,7 +26,12 @@ function Display({ leds }: DisplayProps) {
             {ledsName?.map((ledName) => {
               return (
                 <Segment
-                  className={`${ledName}_segment ${item[ledName]}`}
+                  className={`
+                    ${ledName}_segment
+                    ${item[ledName]}
+                    ${success && item[ledName] === "on" && "success"}
+                    ${error && item[ledName] === "on" && "error"}`
+                  }
                   data-testid={`${ledName}_segment`}
                 />
               );

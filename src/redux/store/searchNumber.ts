@@ -6,6 +6,7 @@ const { error, success, orange } = colors;
 const INITIAL_STATE = {
   loading: false,
   searchedNumber: 0,
+  success: false,
   error: false,
   message: "",
   colorMessage: "",
@@ -47,7 +48,8 @@ export default createReducer(INITIAL_STATE, {
     return {
       ...state,
       loading: false,
-      message: "Erro",
+      message: "ERRO",
+      error: true,
       colorMessage: error,
     };
   },
@@ -57,14 +59,15 @@ export default createReducer(INITIAL_STATE, {
     return {
       ...state,
       leds: leds,
+      success: state?.searchedNumber == guessNumber ? true : false,
       message:
         state?.searchedNumber > guessNumber
           ? "É maior"
           : state?.searchedNumber !== 0 && state?.searchedNumber < guessNumber
-          ? "É menor"
-          : state?.searchedNumber == guessNumber
-          ? "Você acertou!!!"
-          : "Erro",
+            ? "É menor"
+            : state?.searchedNumber == guessNumber
+              ? "Você acertou!!!"
+              : "ERRO",
       colorMessage:
         state?.searchedNumber !== 0
           ? state?.searchedNumber > guessNumber ||

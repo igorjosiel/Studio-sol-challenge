@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import colors from "../../styles/colors";
 
-const { success, ledOn, ledOff } = colors;
+const { success, error, ledOn, ledOff } = colors;
 
 export const ContainerSegments = styled.div`
   height: 40%;
@@ -66,5 +66,11 @@ export const Segment = styled.div`
   }
   &.off {
     background-color: ${ledOff};
+  }
+  &.success {
+    background-color: ${success};
+  }
+  &.error {
+    background-color: ${error};
   }
 `;
