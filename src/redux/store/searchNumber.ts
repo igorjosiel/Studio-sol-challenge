@@ -35,6 +35,23 @@ export default createReducer(INITIAL_STATE, {
     return {
       ...state,
       loading: true,
+      searchedNumber: 0,
+      success: false,
+      error: false,
+      message: "",
+      colorMessage: "",
+
+      leds: [
+        {
+          first: "on",
+          second: "on",
+          third: "on",
+          fourth: "on",
+          fifth: "on",
+          sixth: "on",
+          seventh: "off",
+        },
+      ],
     };
   },
   [typeSuccess.type]: (state, { payload }) => {

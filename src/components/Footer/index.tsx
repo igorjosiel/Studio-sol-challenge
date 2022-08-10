@@ -1,14 +1,19 @@
 import { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Input, Button } from "../index";
 import { Container } from "./styles";
 import switchLed from "../../utils/switchLeds";
 import { changeLedsAction } from "../../redux/fetchActions/searchNumberAction";
+import { RootState } from "../../App.types";
 
 function Footer() {
   const [guessNumber, setGuessNumber] = useState("");
 
   const dispatch = useDispatch<any>();
+
+  const { success, error } = useSelector<RootState, any>(
+    (store) => store?.searchNumber
+  );
 
   const changeGuessNumber = (value: string) => {
     if (value.includes("e") || value.includes(".")) return;
@@ -38,7 +43,10 @@ function Footer() {
         text="Enviar"
         height="45px"
         onClick={handleGuessNumber}
-        disabled={false}
+        cursor={success | error ? 'auto' : 'pointer'}
+        boxShadow={success | error ? '' : '1px 1px 4px 1px #888888'}
+        background={success | error ? '#DDDDDD' : 'linear-gradient(180deg, #ef6c00 0%, #c0661c 100%)'}
+        disabled={success | error ? true : false}
       />
     </Container>
   );

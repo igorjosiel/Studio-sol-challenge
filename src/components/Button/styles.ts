@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { ButtonProps } from "./types";
 
 export const StyledButton = styled.button<ButtonProps>`
-  background: linear-gradient(180deg, #ef6c00 0%, #c0661c 100%);
+  background: ${(props) => props.background};
   color: #fff;
   border: none;
   border-radius: 4px;
@@ -11,15 +11,12 @@ export const StyledButton = styled.button<ButtonProps>`
   text-transform: uppercase;
   font-size: 13px;
   font-weight: 700;
-  cursor: pointer;
+  cursor: ${props => props.cursor};
 
-  &:disabled {
-    background: #ddd;
-  }
   &:focus {
     border: 1px solid #ff6600;
   }
   &:hover {
-    box-shadow: 1px 1px 4px 1px #888888;
+    box-shadow: ${props => props.boxShadow};
   }
 `;

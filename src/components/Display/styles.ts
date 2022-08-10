@@ -1,16 +1,45 @@
 import styled from "styled-components";
 import colors from "../../styles/colors";
+import { StyledButton } from "../Button/styles";
+import { MdRefresh } from "react-icons/md";
 
 const { success, error, ledOn, ledOff } = colors;
 
 export const ContainerSegments = styled.div`
-  height: 40%;
+  height: 25%;
   display: flex;
   column-gap: 15px;
   justify-content: center;
   flex-direction: row;
   align-items: flex-start;
   padding: 50px;
+`;
+
+export const ContainerButton = styled.div`
+  height: 25%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+`;
+
+export const RefreshIcon = styled(MdRefresh)`
+  margin-right: 7px;
+`;
+
+export const Button = styled(StyledButton)`
+  background: linear-gradient(180deg, #434854 0%, #9E9E9E 100%);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  width: 150px;
+  height: 45px;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const Segment = styled.div`
