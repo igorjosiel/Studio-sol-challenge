@@ -22,6 +22,8 @@ function Footer() {
   };
 
   const handleGuessNumber = () => {
+    if (!guessNumber) return;
+
     const changedLeds = switchLed(guessNumber);
     dispatch(changeLedsAction(changedLeds, guessNumber));
 

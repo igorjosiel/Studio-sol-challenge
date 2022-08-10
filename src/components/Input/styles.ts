@@ -21,9 +21,6 @@ export const StyledInput = styled.input<InputProps>`
     background-color: #f5f5f5;
   }
   &:focus {
-    border: 1px solid ${focus};
-  }
-  &.guess_input_error {
-    border: 1px solid ${error};
+    border: 1px solid #FF6600;
   }
 `;
