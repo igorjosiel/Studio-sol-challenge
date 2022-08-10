@@ -81,10 +81,10 @@ export default createReducer(INITIAL_STATE, {
         state?.searchedNumber > guessNumber
           ? "É maior"
           : state?.searchedNumber !== 0 && state?.searchedNumber < guessNumber
-            ? "É menor"
-            : state?.searchedNumber == guessNumber
-              ? "Você acertou!!!"
-              : "ERRO",
+          ? "É menor"
+          : state?.searchedNumber == guessNumber
+          ? "Você acertou!!!"
+          : "ERRO",
       colorMessage:
         state?.searchedNumber !== 0
           ? state?.searchedNumber > guessNumber ||
