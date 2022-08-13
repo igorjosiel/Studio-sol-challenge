@@ -44,13 +44,14 @@ function Display({ leds }: DisplayProps) {
           </div>
         ))}
       </ContainerSegments>
-      {success | error &&
+      {success | error ?
         <ContainerButton onClick={() => dispatch(searchNumberAction())}>
           <Button as="div">
             <RefreshIcon size={20} />
             <p>NOVA PARTIDA</p>
           </Button>
         </ContainerButton>
+        : <></>
       }
     </>
   );
