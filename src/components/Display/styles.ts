@@ -13,6 +13,7 @@ export const ContainerSegments = styled.div`
   flex-direction: row;
   align-items: flex-start;
   padding: 50px;
+  margin-bottom: 90px;
 `;
 
 export const ContainerButton = styled.div`
