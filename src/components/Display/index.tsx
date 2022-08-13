@@ -1,4 +1,10 @@
-import { ContainerSegments, ContainerButton, Segment, Button, RefreshIcon, } from "./styles";
+import {
+  ContainerSegments,
+  ContainerButton,
+  Segment,
+  Button,
+  RefreshIcon,
+} from "./styles";
 import { DisplayProps } from "./types";
 import { RootState } from "../../App.types";
 import { useSelector } from "react-redux";
@@ -35,8 +41,7 @@ function Display({ leds }: DisplayProps) {
                     ${ledName}_segment
                     ${item[ledName]}
                     ${success && item[ledName] === "on" && "success"}
-                    ${error && item[ledName] === "on" && "error"}`
-                  }
+                    ${error && item[ledName] === "on" && "error"}`}
                   data-testid={`${ledName}_segment`}
                 />
               );
@@ -44,15 +49,14 @@ function Display({ leds }: DisplayProps) {
           </div>
         ))}
       </ContainerSegments>
-      {success | error ?
+      {success | error ? (
         <ContainerButton onClick={() => dispatch(searchNumberAction())}>
           <Button as="div">
             <RefreshIcon size={20} />
             <p>NOVA PARTIDA</p>
           </Button>
         </ContainerButton>
-        : <></>
-      }
+      ) : null}
     </>
   );
 }
